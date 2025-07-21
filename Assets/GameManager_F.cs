@@ -14,6 +14,16 @@ public class GameManager_F : MonoBehaviour
     // Reference to the UI //
     public TextMeshProUGUI scoreText;
 
+    // Reference to the AudioSource //
+    public AudioSource audioSource;
+
+    // Reference of the AudioClip //
+    public AudioClip[] healSoundArr;
+
+    // Reference for the BGM 1 and 2 //
+    public AudioClip BGM1;
+    public AudioClip BGM2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,5 +48,20 @@ public class GameManager_F : MonoBehaviour
 
         // Display the current health onto the screen //
         scoreText.text = "Health: " + this.health;
+
+        // Play some sound //
+        audioSource.PlayOneShot(healSoundArr[Random.Range(0, healSoundArr.Length)]);
+    }
+
+    public void PlayBGM1() 
+    {
+        audioSource.clip = BGM1;
+        audioSource.Play();
+    }
+
+    public void PlayBGM2()
+    {
+        audioSource.clip = BGM2;
+        audioSource.Play();
     }
 }
