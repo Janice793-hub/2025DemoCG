@@ -680,6 +680,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: a78f6861dcf3b7443b96da62579779cf, type: 3}
   BGM1: {fileID: 8300000, guid: 82e413a3d00024046932819b1855f9a6, type: 3}
   BGM2: {fileID: 8300000, guid: 304067221e185894e9611e94ddf21259, type: 3}
+  BGMHealing: {fileID: 8300000, guid: 6201405dd44934d4c8b67235017d9818, type: 3}
 --- !u!4 &163342759
 Transform:
   m_ObjectHideFlags: 0
@@ -12324,6 +12325,8 @@ GameObject:
   - component: {fileID: 4000014366113200}
   - component: {fileID: 198000013479525696}
   - component: {fileID: 199000009788871702}
+  - component: {fileID: 199000009788871703}
+  - component: {fileID: 199000009788871704}
   m_Layer: 0
   m_Name: Portal_24
   m_TagString: Untagged
@@ -30719,6 +30722,32 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!135 &199000009788871703
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011511016180}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 3.7272835
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &199000009788871704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000011511016180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b51d9abe7b50ad42a4898af8838ccf3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healingRate: 10
 --- !u!199 &199000010540095488
 ParticleSystemRenderer:
   serializedVersion: 6

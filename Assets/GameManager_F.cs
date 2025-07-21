@@ -9,7 +9,7 @@ public class GameManager_F : MonoBehaviour
     public static GameManager_F instance;
 
     // Variable to store the health //
-    private int health;
+    private float health;
 
     // Reference to the UI //
     public TextMeshProUGUI scoreText;
@@ -23,6 +23,7 @@ public class GameManager_F : MonoBehaviour
     // Reference for the BGM 1 and 2 //
     public AudioClip BGM1;
     public AudioClip BGM2;
+    public AudioClip BGMHealing;
 
     // Start is called before the first frame update
     void Start()
@@ -43,14 +44,36 @@ public class GameManager_F : MonoBehaviour
         // Add health //
         this.health += _health;
 
+        // Make sure health is not more than 200 //
+        this.health = (this.health >= 200) ? 200 : this.health;
+
         // Display the current health onto the console //
         print("this.health: " + this.health);
 
         // Display the current health onto the screen //
-        scoreText.text = "Health: " + this.health;
+        scoreText.text = "Health: " + (int)this.health;
 
         // Play some sound //
         audioSource.PlayOneShot(healSoundArr[Random.Range(0, healSoundArr.Length)]);
+    }
+
+    public void AddHealth(float _health)
+    {
+        // Add health //
+        this.health += _health;
+
+        // Make sure health is not more than 200 //
+        this.health = (this.health >= 200) ? 200 : this.health;
+        // Conditional statement //
+        // (condition) ? <true> : <false>
+
+        // Display the current health onto the console //
+        print("this.health: " + this.health);
+
+        // Display the current health onto the screen //
+        scoreText.text = "Health: " + (int)this.health;
+        // Play some sound //
+        //audioSource.PlayOneShot(healSoundArr[Random.Range(0, healSoundArr.Length)]);
     }
 
     public void PlayBGM1() 
@@ -62,6 +85,12 @@ public class GameManager_F : MonoBehaviour
     public void PlayBGM2()
     {
         audioSource.clip = BGM2;
+        audioSource.Play();
+    }
+
+    public void PlayBGMHealing()
+    {
+        audioSource.clip = BGMHealing;
         audioSource.Play();
     }
 }
