@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class HealingPond : MonoBehaviour
+public class HealingPond_F : MonoBehaviour
 {
     public float healingRate;
 
