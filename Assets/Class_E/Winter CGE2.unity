@@ -2857,6 +2857,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4465318100354604385, guid: 0ba4c3c8f625b0b4091eb686520ef44d, type: 3}
   m_PrefabInstance: {fileID: 536615769}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &549421180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 549421182}
+  - component: {fileID: 549421181}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &549421181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549421180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ec713a594440b34195cb5e964bf3370, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 0
+  healthText: {fileID: 914699922}
+--- !u!4 &549421182
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 549421180}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.6408696, y: -0.3817712, z: -33.650158}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &551478672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32397,6 +32443,8 @@ GameObject:
   - component: {fileID: 5819735399505164874}
   - component: {fileID: 7452332684644873711}
   - component: {fileID: 4650237500363276581}
+  - component: {fileID: 7452332684644873712}
+  - component: {fileID: 7452332684644873713}
   m_Layer: 0
   m_Name: snowman (Healer)
   m_TagString: Untagged
@@ -32576,6 +32624,31 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6595532848796868848}
   m_Mesh: {fileID: -7079256240385013130, guid: 38fb6abf6d3178142a148e8e2ba1fe19, type: 3}
+--- !u!65 &7452332684644873712
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6595532848796868848}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.30748552, y: 1.2474146, z: 0.50549793}
+  m_Center: {x: 0.050041478, y: 0.6070505, z: 0.034839455}
+--- !u!114 &7452332684644873713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6595532848796868848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f27f97deb431c84e8120517e6e41fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &7452332685210613385
 MeshFilter:
   m_ObjectHideFlags: 0
