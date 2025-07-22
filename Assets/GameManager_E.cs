@@ -39,5 +39,8 @@ public class GameManager_E : MonoBehaviour
 
         // Display on the console the total health now //
         print("Health: " + health);
+
+        // Display health onto screen //
+        healthText.text = "Health: " + health;
     }
 }
