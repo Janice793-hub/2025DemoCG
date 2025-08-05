@@ -36,8 +36,7 @@ public class GameManager_E : MonoBehaviour
     public void AddHealth(int healthToAdd)
     {
         health += healthToAdd;
-        
-        // Display 
         print("Health: " + health);
+        healthText.text = "health: " + health;
     }
 }
